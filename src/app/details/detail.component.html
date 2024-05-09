@@ -1,0 +1,35 @@
+<div class="mat-elevation-z8">
+    <mat-card>
+        <mat-card-content>
+            <mat-icon mat-icon class="icon" aria-hidden="true" matTooltip="{{this.tooltipDex}}">{{this.iconaTabella}}</mat-icon>
+            <div class="titles">
+                <h3 class="title-row">{{dataSource.row_number}} - {{dataSource.nome}} {{dataSource.cognome}}</h3>
+                <h3 class="title-row">{{dataSource.informazioni_cronologiche}}</h3>
+            </div>
+            <div class="infos">
+                <!-- Sezione contatti -->
+                <div class="contatti">
+                    <h4 class="title-row">Contatti</h4>
+                    <div class="contatto-row">
+                        <span>{{dataSource.email}} </span>
+                        <mat-icon mat-icon class="icon" aria-hidden="true">mail</mat-icon>
+                    </div>
+                    <div class="contatto-row">
+                        <span>{{dataSource.numero_telefono}} </span>
+                        <mat-icon mat-icon class="icon" aria-hidden="true">phone</mat-icon>
+                    </div>
+                </div>
+                <!-- Sezione diagnosi (si/no) -->
+                <div class="diagnosi">
+                    <h4 class="title-row">Ha gi&agrave; una diagnosi?</h4>
+                    <span>{{dataSource.diagnosi}}</span>
+                </div>
+            </div>
+            <!-- Sezione perché -->
+            <div class="perche">
+                <h4 class="title-row">Perch&eacute; vorresti essere tra le pazienti del progetto Endo-Care? </h4>
+                <span>{{dataSource.perche_paziente_endocare}}</span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

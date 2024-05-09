@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import "./styles/light-theme.scss";
+@import "./styles/dark-theme.scss";
+
+$primary-color: mat.get-theme-color($light-theme, primary, default);
+$light-primary-color: mat.get-theme-color($light-theme, primary, 300);
+$dark-primary-color: mat.get-theme-color($light-theme, primary, 900);
+
+$accent-color: mat.get-theme-color($light-theme, accent, default);
+$light-accent-color: mat.get-theme-color($light-theme, accent, 200);
+$dark-accent-color: mat.get-theme-color($light-theme, primary, 900);
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}

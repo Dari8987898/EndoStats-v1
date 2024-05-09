@@ -1,0 +1,57 @@
+@import "../../styles.scss";
+
+mat-card-content {
+    padding: auto;
+}
+
+.mat-elevation-z8 {
+    margin: auto;
+    margin-top: 2%;
+    padding: auto;
+    width: 50%;
+}
+
+.title-row {
+    color: $primary-color;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    color: $accent-color;
+}
+
+.contatto-row {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contatti,
+.diagnosi {
+    margin: auto;
+    margin-top: 0%;
+    padding: 5px;
+    width: 50%;
+}
+
+.diagnosi {
+    text-align: right;
+}
+
+.infos,
+.titles {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+}
+
+.perche {
+    margin: auto;
+    margin-top: 0%;
+    padding: 5px;
+    width: 100%;
+}

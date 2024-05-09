@@ -1,0 +1,51 @@
+@use '@angular/material' as mat;
+
+$primary-palette: (
+  50: #D5F3FF,
+  100: #B4DEF1,
+  200: #95C4DB,
+  300: #74AAC4,
+  400: #5A96B2,
+  500: #3D83A1,
+  600: #2F748F,
+  700: #1F6078,
+  800: #0F4C63,
+  900: #00374B,
+  contrast: (50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: white,
+    800: white,
+    900: white)
+);
+
+$accent-palette: (
+  50: #F8F8E6,
+  100: #EEECC1,
+  200: #E3E098,
+  300: #D9D473,
+  400: #D3CC5A,
+  500: #CDC543,
+  600: #CAB43E,
+  700: #C6A036,
+  800: #C18B2D,
+  900: #B7691F,
+  contrast: (50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: rgba(black, 0.87),
+    800: rgba(black, 0.87),
+    900: white)
+);
+
+$primary: mat.define-palette($primary-palette, 600);
+$accent: mat.define-palette($accent-palette, 800);
+$error: mat.define-palette(mat.$red-palette);

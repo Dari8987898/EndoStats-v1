@@ -1,0 +1,53 @@
+@use '@angular/material' as mat;
+@import "../../styles.scss";
+
+:host {
+  --content-padding: 10px;
+}
+
+.bar {
+  margin: auto;
+  background-color: $primary-color;
+}
+
+.button {
+  background-color: $primary-color;
+  color: $accent-color;
+}
+
+.button:hover,
+.button.active {
+  background-color: $accent-color;
+  color: $primary-color;
+}
+
+.data-caricamento {
+  color: $accent-color;
+}
+
+.div-file-input {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+.div-menu-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-left: 20%;
+  padding-right: 20%;
+  width: 100%;
+}
+
+.title {
+  color: $accent-color;
+  font-size: 20px;
+  margin: auto;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-decoration: none;
+}

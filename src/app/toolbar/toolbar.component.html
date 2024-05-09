@@ -1,0 +1,40 @@
+<mat-toolbar class="bar">
+
+    <a [routerLink]="['/']" class="title">EndoStats</a>
+
+    <div class="div-menu-buttons">
+        <button mat-icon-button matTooltip="Home page" 
+            [routerLink]="['/']" [ngClass]="{'active': staticTabIndex === 0}" (click)="onTabClick(0)"
+            class="button" type="button">
+            <mat-icon mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Gruppi multidisciplinari" 
+            [routerLink]="['/gm-table']" [ngClass]="{'active': staticTabIndex === 1}" (click)="onTabClick(1)"
+            class="button" type="button">
+            <mat-icon mat-icon>groups_3</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Ambulatorio" 
+            [routerLink]="['/ambulatorio-table']" [ngClass]="{'active': staticTabIndex === 2}" (click)="onTabClick(2)"
+            class="button" type="button">
+            <mat-icon mat-icon>local_hospital</mat-icon>
+        </button>
+            <button mat-icon-button matTooltip="Da decidere" 
+            [routerLink]="['/da-decidere-table']" [ngClass]="{'active': staticTabIndex === 3}" (click)="onTabClick(3)"
+            class="button" type="button">
+            <mat-icon mat-icon>live_help</mat-icon>
+        </button>
+    </div>
+
+    <div class="div-file-input">
+        <button mat-icon-button (click)="fileInput.click()" matTooltip="Carica file" type="button" class="button">
+            <mat-icon>upload_file</mat-icon>
+        </button>
+        <input hidden type="file" accept=".xls, .xlsx" (change)="fileChanged($event)" #fileInput>
+    
+        <span class="data-caricamento">
+            {{this.dataUltimoCaricamento ? "Data di ultimo caricamento: " + this.dataUltimoCaricamento : "Nessun file caricato"}}
+        </span>
+    </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

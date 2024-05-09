@@ -1,0 +1,42 @@
+<div class="mat-elevation-z8">
+    <mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="row_number">
+            <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Ordina per riga"> ID </mat-header-cell>
+            <mat-cell *matCellDef="let riga"> {{riga.row_number}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="nome">
+            <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Ordina per nome"> Nome </mat-header-cell>
+            <mat-cell *matCellDef="let riga"> {{riga.nome}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="cognome">
+            <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Ordina per cognome"> Cognome </mat-header-cell>
+            <mat-cell *matCellDef="let riga"> {{riga.cognome}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="data_inserimento">
+            <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Ordina per data di inserimento"> Data di inserimento </mat-header-cell>
+            <mat-cell *matCellDef="let riga"> {{riga.data_inserimento}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="diagnosi">
+            <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Ordina per diagnosi"> Diagnosi </mat-header-cell>
+            <mat-cell *matCellDef="let riga"> {{riga.diagnosi}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="openDettaglio">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let riga;">
+                <button mat-icon-button matTooltip="Apri dettaglio" [routerLink]="['/detail', riga.row_number]" class="button">
+                    <mat-icon mat-icon>description</mat-icon>        
+                </button>
+            </mat-cell>
+        </ng-container>
+        
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[10, 5, 15, 20]" showFirstLastButtons>
+    </mat-paginator>
+</div>

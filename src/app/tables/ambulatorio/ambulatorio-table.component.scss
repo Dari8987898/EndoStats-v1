@@ -1,0 +1,35 @@
+@import "../../../styles.scss";
+
+div {
+    padding: auto;
+    margin: auto;
+    margin-top: 2%;
+    width: 90%;
+}
+
+.button {
+    color: $primary-color;
+}
+
+.mat-column-row_number {
+    flex: 0 1 5%;
+}
+
+.mat-column-numero_telefono,
+.mat-column-diagnosi,
+.mat-column-openDettaglio {
+    flex: 0 1 10%;
+}
+
+.mat-column-cognome,
+.mat-column-nome {
+    text-align: center;
+    flex: 0 1 15%;
+}
+
+.mat-column-numero_telefono,
+.mat-column-openDettaglio,
+.mat-column-diagnosi,
+.mat-column-data_inserimento {
+    justify-content: center;
+}
