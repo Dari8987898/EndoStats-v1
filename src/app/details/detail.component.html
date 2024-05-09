@@ -2,33 +2,205 @@
     <mat-card>
         <mat-card-content>
             <mat-icon mat-icon class="icon" aria-hidden="true" matTooltip="{{this.tooltipDex}}">{{this.iconaTabella}}</mat-icon>
+
             <div class="titles">
                 <h3 class="title-row">{{dataSource.row_number}} - {{dataSource.nome}} {{dataSource.cognome}}</h3>
-                <h3 class="title-row">{{dataSource.informazioni_cronologiche}}</h3>
+                <h3 class="title-row" matTooltip="Data inserimento">Data inserimento - {{dataSource.informazioni_cronologiche}}</h3>
             </div>
-            <div class="infos">
-                <!-- Sezione contatti -->
-                <div class="contatti">
+
+            <div class="row">
+                <h3 class="section-title">Informazioni anagrafiche</h3>
+            </div>
+
+            <div class="row">
+                <div class="center">
                     <h4 class="title-row">Contatti</h4>
-                    <div class="contatto-row">
-                        <span>{{dataSource.email}} </span>
-                        <mat-icon mat-icon class="icon" aria-hidden="true">mail</mat-icon>
+                    <div class="center-text">
+                        <mat-icon mat-icon class="icon"  matTooltip="E-mail">mail</mat-icon>
+                        <span>{{dataSource.email}}</span>
                     </div>
-                    <div class="contatto-row">
-                        <span>{{dataSource.numero_telefono}} </span>
-                        <mat-icon mat-icon class="icon" aria-hidden="true">phone</mat-icon>
+                    <div class="center-text">
+                        <mat-icon mat-icon class="icon" matTooltip="N. telefono">phone</mat-icon>
+                        <span>{{dataSource.numero_telefono}}</span>
                     </div>
                 </div>
-                <!-- Sezione diagnosi (si/no) -->
-                <div class="diagnosi">
-                    <h4 class="title-row">Ha gi&agrave; una diagnosi?</h4>
-                    <span>{{dataSource.diagnosi}}</span>
+
+                <div class="center">
+                    <h4 class="title-row">Indirizzi</h4>
+                    <div class="center-text">
+                        <mat-icon mat-icon class="icon"  matTooltip="Luogo di nascita">home</mat-icon>
+                        <span>{{dataSource.luogo_nascita}}</span>
+                    </div>
+                    <div class="center-text">
+                        <mat-icon mat-icon class="icon"  matTooltip="Indirizzo di residenza">location_city</mat-icon>
+                        <span>{{dataSource.residenza}}</span>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <h4 class="title-row">Età</h4>
+                    <div class="center-text">
+                        <mat-icon mat-icon class="icon"  matTooltip="Data di nascita">perm_contact_calendar</mat-icon>
+                        <span>{{dataSource.data_nascita}}</span>
+                    </div>
+                    <div class="center-text">
+                        <mat-icon mat-icon class="icon"  matTooltip="Fascia di età">format_list_numbered</mat-icon>
+                        <span>{{dataSource.quanti_anni_hai}}</span>
+                    </div>
                 </div>
             </div>
-            <!-- Sezione perché -->
-            <div class="perche">
-                <h4 class="title-row">Perch&eacute; vorresti essere tra le pazienti del progetto Endo-Care? </h4>
-                <span>{{dataSource.perche_paziente_endocare}}</span>
+
+            <mat-divider class="divider"></mat-divider> <!------------------------------------------------------------------>
+
+            <div class="row">
+                <h3 class="section-title">Risposte form</h3>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Hai gi&agrave; una diagnosi?</h4>
+                    <div class="center-text">
+                        <span>{{dataSource.diagnosi}}</span>
+                    </div>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Sei occupata o stai lavorando?</h4>
+                    <div class="center-text">
+                        <span>{{dataSource.sei_occupata}}</span>
+                    </div>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Che lavoro svolgi/svolgevi?</h4>
+                    <div class="center-text">
+                        <span>{{dataSource.che_lavoro_svolgi}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Soffri di dolore mestruale?</h4>
+                    <span>{{dataSource.dolore_mestruale}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Quanto è disturbante da 1 a 10?</h4>
+                    <span>{{dataSource.quanto_disturbante}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Da quanto tempo hai dolore?</h4>
+                    <span>{{dataSource.da_quanto_tempo}}</span>
+                </div><div class="center">
+                    <h4 class="title-row">Riesci a gestire il tuo dolore?</h4>
+                    <span>{{dataSource.riesci_a_gestire_dolore}}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Come gestisci, o provi a gestire, il dolore?</h4>
+                    <span>{{dataSource.come_gestisci_dolore}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">C'è qualcuno su cui puoi contare quando stai male?</h4>
+                    <span>{{dataSource.qualcuno_su_cui_contare}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Sei mai stata operata chirurgicamente per endometriosi? </h4>
+                    <span>{{dataSource.operata_per_endometriosi}}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Sei mai stata assente da scuola o dal lavoro a causa dei dolori mestruali?</h4>
+                    <span>{{dataSource.assente_lavoro_scuola}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Riesci ad avere rapporti sessuali penetrativi?</h4>
+                    <span>{{dataSource.rapporti_penetrativi}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Hai dovuto interrompere l'attività fisica o lo sport che prima facevi?</h4>
+                    <span>{{dataSource.interrompere_sport}}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Quali specialisti hai consultato per il tuo problema?</h4>
+                    <span>{{dataSource.quali_specialisti_consultati}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Come hai conosciuto Endo-Care?</h4>
+                    <span>{{dataSource.quali_specialisti_consultati}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Perché vorresti essere tra le pazienti del progetto Endo-Care?</h4>
+                    <span>{{dataSource.perche_paziente_endocare}}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Sei già paziente di uno o più professionisti che prestano servizio presso EndoCare?</h4>
+                    <span>{{dataSource.gia_paziente_endocare}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Se sì, da chi di noi sei già seguita?</h4>
+                    <span>{{dataSource.se_si_chi_endocare}}</span>
+                </div>
+            </div>
+
+            <mat-divider class="divider"></mat-divider> <!------------------------------------------------------------------>
+
+            <div class="row">
+                <h3 class="section-title">Quanto sono disturbanti i seguenti sintomi?</h3>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Dolore pelvico cronico</h4>
+                    <span>{{dataSource.qta_dolore_pelvico_cronico}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Dolore durante i rapporti sessuali</h4>
+                    <span>{{dataSource.qta_dolore_durante_rapporti}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Dolori intestinali</h4>
+                    <span>{{dataSource.qta_dolori_intestinali}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Dolori alla schiena, lombari</h4>
+                    <span>{{dataSource.qta_dolori_schiena_lombari}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Stanchezza cronica</h4>
+                    <span>{{dataSource.qta_stanchezza_cronica}}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center">
+                    <h4 class="title-row">Gonfiore addominale (endo belly)</h4>
+                    <span>{{dataSource.qta_gonfiore_addominale}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Cistiti ricorrenti</h4>
+                    <span>{{dataSource.qta_cistiti_ricorrenti}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Coliche</h4>
+                    <span>{{dataSource.qta_coliche}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Cefalea</h4>
+                    <span>{{dataSource.qta_cefalea}}</span>
+                </div>
+                <div class="center">
+                    <h4 class="title-row">Quanto pensi che i tuoi sintomi influiscano negativamente sulla qualità della tua vita?</h4>
+                    <span>{{dataSource.qta_influire_sintomi_qualita_vita}}</span>
+                </div>
             </div>
         </mat-card-content>
     </mat-card>

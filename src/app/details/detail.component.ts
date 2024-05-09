@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from "@angular/core";
 import { MatCardModule } from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 import { MatIconModule } from "@angular/material/icon";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { ActivatedRoute } from "@angular/router";
@@ -7,12 +8,15 @@ import { ActivatedRoute } from "@angular/router";
 import { RigaInterface } from "../interfaces/riga.interface";
 import { MainService } from "../main.service";
 import { ToolbarComponent } from "../toolbar/toolbar.component";
+import { CommonModule } from "@angular/common";
 
 @Component({
     selector: 'detail',
     standalone: true,
     imports: [
+        CommonModule,
         MatCardModule,
+        MatDividerModule,
         MatIconModule,
         MatTooltipModule
     ],

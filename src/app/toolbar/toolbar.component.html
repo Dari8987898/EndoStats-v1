@@ -1,8 +1,7 @@
-<mat-toolbar class="bar">
-
+<mat-toolbar class="toolbar">
     <a [routerLink]="['/']" class="title">EndoStats</a>
 
-    <div class="div-menu-buttons">
+    <div class="toolbar-menu-buttons">
         <button mat-icon-button matTooltip="Home page" 
             [routerLink]="['/']" [ngClass]="{'active': staticTabIndex === 0}" (click)="onTabClick(0)"
             class="button" type="button">
@@ -25,7 +24,7 @@
         </button>
     </div>
 
-    <div class="div-file-input">
+    <div class="toolbar-file-input">
         <button mat-icon-button (click)="fileInput.click()" matTooltip="Carica file" type="button" class="button">
             <mat-icon>upload_file</mat-icon>
         </button>
