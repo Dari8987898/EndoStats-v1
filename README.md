@@ -1,3 +1,6 @@
+# [Dismissed in favor of [EndoStats-v2](https://github.com/Dari8987898/EndoStats-v2)]
+</br></br>
+
 ![Image](./src/assets/images/MarchioCompleto.png)
 
 # EndoStats
@@ -46,4 +49,3 @@ Any help is well accepted, make a pull request and you are on track!
 
 ## Forking
 If you find this repo of some use feel free to fork!
-</br></br>
